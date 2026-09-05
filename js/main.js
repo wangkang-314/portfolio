@@ -28,18 +28,4 @@
       }
     });
   }
-
-  // 滚动时给导航加阴影
-  var header = document.getElementById('siteHeader');
-  if (header) {
-    var onScroll = function () {
-      if (window.scrollY > 8) {
-        header.style.boxShadow = '0 2px 12px rgba(20, 30, 45, 0.06)';
-      } else {
-        header.style.boxShadow = 'none';
-      }
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-  }
 })();
