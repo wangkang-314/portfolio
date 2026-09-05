@@ -12,7 +12,7 @@
   <!-- ===================== 顶部导航 ===================== -->
   <header class="site-header">
     <nav class="nav container">
-      <a class="brand" href="#home">
+      <a class="brand" href="#about">
         <span class="brand-mark">王</span>
         <span class="brand-name">王 康</span>
       </a>
@@ -25,7 +25,6 @@
         <li><a href="#projects">项目经历</a></li>
         <li><a href="#publications">论文</a></li>
         <li><a href="#skills">个人技能</a></li>
-        <li><a class="nav-cta" href="#contact">联系我</a></li>
       </ul>
 
       <button class="nav-toggle" id="navToggle" aria-label="打开菜单" aria-expanded="false">
@@ -35,48 +34,37 @@
   </header>
 
   <main>
-    <!-- ===================== Hero ===================== -->
-    <section class="hero" id="home">
-      <div class="container hero-inner">
-        <h1 class="hero-name">王 康</h1>
-        <p class="hero-title">风控建模 · 数据科学</p>
-      </div>
-    </section>
-
-    <!-- ===================== 个人简介 ===================== -->
-    <section class="section" id="about">
+    <!-- ===================== 个人简介(含照片与联系方式) ===================== -->
+    <section class="section intro" id="about">
       <div class="container">
-        <div class="section-head">
-          <span class="section-label">个人简介</span>
-          <h2 class="section-title">关于我</h2>
-        </div>
-        <div class="about-grid">
-          <div class="about-text">
-            <p>
+        <div class="intro-card">
+          <div class="intro-photo">
+            <span class="photo-fallback">王</span>
+            <!-- 把照片放到 assets/photo.jpg,放好后占位字母会自动隐藏 -->
+            <img src="assets/photo.jpg" alt="王康" onerror="this.style.display='none'" />
+          </div>
+
+          <div class="intro-body">
+            <h1 class="intro-name">王康</h1>
+            <p class="intro-title">风控建模 · 数据科学</p>
+            <p class="intro-desc">
               我是一名计算数学硕士研究生(070102),具备扎实的数理基础,乐于把抽象的数学方法落地为可用的风控模型,也关注模型的可解释性。
             </p>
-            <p>
+            <p class="intro-desc">
               <!-- TODO: 可补充第二段,如研究方向、职业目标 -->
               在风控建模、机器学习与数值方法等方面有系统的学习与实践,希望以数据驱动业务风险决策。
             </p>
-          </div>
-          <div class="about-meta">
-            <div class="meta-item">
-              <span class="meta-key">学历</span>
-              <span class="meta-val">厦门大学 · 硕士</span>
+
+            <div class="intro-contact">
+              <a class="btn btn-primary" href="mailto:wang_kang314@163.com">发送邮件</a>
+              <a class="btn btn-ghost" href="assets/resume.pdf" target="_blank" rel="noopener">下载简历</a>
             </div>
-            <div class="meta-item">
-              <span class="meta-key">方向</span>
-              <span class="meta-val">风控建模 / 机器学习</span>
-            </div>
-            <div class="meta-item">
-              <span class="meta-key">邮箱</span>
-              <span class="meta-val"><a href="mailto:wang_kang314@163.com">wang_kang314@163.com</a></span>
-            </div>
-            <div class="meta-item">
-              <span class="meta-key">手机</span>
-              <span class="meta-val">18455543368</span>
-            </div>
+
+            <ul class="intro-meta">
+              <li>邮箱: <a href="mailto:wang_kang314@163.com">wang_kang314@163.com</a></li>
+              <li>手机: 18455543368</li>
+              <li>GitHub: <a href="https://github.com/" target="_blank" rel="noopener">github.com/</a></li>
+            </ul>
           </div>
         </div>
       </div>
@@ -271,27 +259,12 @@
         </div>
       </div>
     </section>
-
-    <!-- ===================== 联系 ===================== -->
-    <section class="section section-alt" id="contact">
-      <div class="container contact-inner">
-        <div class="section-head">
-          <span class="section-label">联系</span>
-          <h2 class="section-title">Contact</h2>
-        </div>
-        <p class="contact-intro">如果你对我的背景感兴趣,欢迎通过以下方式联系我。</p>
-        <div class="contact-actions">
-          <a class="btn btn-primary" href="mailto:wang_kang314@163.com">发送邮件</a>
-          <a class="btn btn-ghost" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>© <span id="year"></span> 王康 · 保留所有权利</p>
-      <a href="#home" class="back-top">返回顶部 ↑</a>
+      <a href="#about" class="back-top">返回顶部 ↑</a>
     </div>
   </footer>
 
