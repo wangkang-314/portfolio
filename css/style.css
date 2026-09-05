@@ -1,26 +1,26 @@
 /* ============================================================
    王康 · 个人求职主页
-   暗色技术风:深蓝黑底 + 青/紫渐变点缀 + 等宽字体终端感
+   浅色风格:浅灰底 + 白色卡片 + 青/紫渐变点缀 + 等宽字体点缀
    ============================================================ */
 
 :root {
-  --bg: #141b2e;
-  --bg-elev: #1a2236;
-  --surface: #212b41;
-  --surface-2: #2a3550;
-  --border: rgba(148, 163, 184, 0.18);
-  --border-strong: rgba(148, 163, 184, 0.3);
+  --bg: #f4f6fa;
+  --bg-elev: #eef1f6;
+  --surface: #ffffff;
+  --surface-2: #eef1f6;
+  --border: rgba(15, 23, 42, 0.08);
+  --border-strong: rgba(15, 23, 42, 0.14);
 
-  --text: #e7edf5;
-  --text-soft: #a9b4c2;
-  --muted: #7d8899;
+  --text: #1c2430;
+  --text-soft: #4b5563;
+  --muted: #8a94a6;
 
-  --accent: #22d3ee;      /* 青 */
-  --accent-2: #8b5cf6;    /* 紫 */
-  --accent-soft: rgba(34, 211, 238, 0.12);
+  --accent: #0891b2;      /* 青 */
+  --accent-2: #7c3aed;    /* 紫 */
+  --accent-soft: rgba(8, 145, 178, 0.10);
 
   --radius: 14px;
-  --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.45);
+  --shadow-md: 0 12px 32px rgba(15, 23, 42, 0.08);
 
   --font: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
     "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
@@ -57,7 +57,7 @@ img { max-width: 100%; display: block; }
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(20, 27, 46, 0.72);
+  background: rgba(255, 255, 255, 0.72);
   backdrop-filter: saturate(160%) blur(14px);
   border-bottom: 1px solid var(--border);
 }
@@ -86,7 +86,7 @@ img { max-width: 100%; display: block; }
   height: 32px;
   border-radius: 8px;
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  color: #06121a;
+  color: #ffffff;
   font-weight: 800;
   font-size: 16px;
 }
@@ -111,7 +111,7 @@ img { max-width: 100%; display: block; }
   padding: 8px 18px;
   border-radius: 999px;
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  color: #06121a !important;
+  color: #ffffff !important;
   font-weight: 600;
   transition: opacity 0.2s, transform 0.2s;
 }
@@ -140,10 +140,15 @@ img { max-width: 100%; display: block; }
   padding: 64px 0;
 }
 
-.intro-card {
+.intro-wrap {
   display: flex;
   gap: 36px;
-  align-items: flex-start;
+  align-items: center;
+}
+
+.intro-card {
+  flex: 1;
+  min-width: 0;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 18px;
@@ -152,9 +157,9 @@ img { max-width: 100%; display: block; }
 
 .intro-photo {
   flex-shrink: 0;
-  width: 128px;
-  height: 128px;
-  border-radius: 16px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
   overflow: hidden;
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
   display: flex;
@@ -169,13 +174,11 @@ img { max-width: 100%; display: block; }
 }
 
 .photo-fallback {
-  font-size: 52px;
+  font-size: 64px;
   font-weight: 800;
-  color: #06121a;
+  color: #ffffff;
   font-family: var(--font-mono);
 }
-
-.intro-body { flex: 1; min-width: 0; }
 
 .intro-name {
   font-size: 40px;
@@ -239,11 +242,11 @@ img { max-width: 100%; display: block; }
 
 .btn-primary {
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  color: #06121a;
+  color: #ffffff;
 }
 
 .btn-primary:hover {
-  box-shadow: 0 8px 24px rgba(34, 211, 238, 0.35);
+  box-shadow: 0 8px 24px rgba(8, 145, 178, 0.3);
 }
 
 .btn-ghost {
@@ -309,7 +312,7 @@ img { max-width: 100%; display: block; }
   border-radius: 50%;
   background: var(--accent);
   border: 3px solid var(--bg);
-  box-shadow: 0 0 0 1px var(--accent), 0 0 12px rgba(34, 211, 238, 0.5);
+  box-shadow: 0 0 0 1px var(--accent), 0 0 8px rgba(8, 145, 178, 0.3);
 }
 
 .timeline-card {
@@ -397,7 +400,7 @@ img { max-width: 100%; display: block; }
   border-radius: 999px;
   background: var(--accent-soft);
   color: var(--accent);
-  border: 1px solid rgba(34, 211, 238, 0.2);
+  border: 1px solid rgba(8, 145, 178, 0.22);
   font-family: var(--font-mono);
 }
 
@@ -428,7 +431,7 @@ img { max-width: 100%; display: block; }
   border-radius: 999px;
   background: var(--accent-soft);
   color: var(--accent);
-  border: 1px solid rgba(34, 211, 238, 0.2);
+  border: 1px solid rgba(8, 145, 178, 0.22);
   font-weight: 600;
   font-family: var(--font-mono);
 }
@@ -492,7 +495,7 @@ img { max-width: 100%; display: block; }
 
 /* ---------- 页脚 ---------- */
 .site-footer {
-  background: #101624;
+  background: #eef1f6;
   border-top: 1px solid var(--border);
   padding: 26px 0;
 }
@@ -512,8 +515,9 @@ img { max-width: 100%; display: block; }
 
 /* ---------- 响应式 ---------- */
 @media (max-width: 860px) {
-  .intro-card { flex-direction: column; gap: 24px; padding: 28px; }
-  .intro-photo { width: 104px; height: 104px; }
+  .intro-wrap { flex-direction: column; gap: 20px; align-items: center; }
+  .intro-photo { width: 140px; height: 140px; }
+  .intro-card { padding: 28px; }
   .projects-grid { grid-template-columns: 1fr 1fr; }
   .skills-grid { grid-template-columns: 1fr; }
 
@@ -525,7 +529,7 @@ img { max-width: 100%; display: block; }
     flex-direction: column;
     align-items: flex-start;
     gap: 0;
-    background: #1a2236;
+    background: #ffffff;
     border-bottom: 1px solid var(--border);
     padding: 8px 24px 20px;
     display: none;
